@@ -1,14 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Products</h1>
-
-<table id="table-main">
-  <thead>
+<h1>Bikes</h1>
+<%= link_to 'Add New Product', new_product_path %>
+<br>
+<table>
+  <thead id="table-head">
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th><u>Name</u></th>
+      <th><u>Description</th>
       <th>Image URL</th>
-      <th colspan="10"></th>
+      <th>Colour</th>
+      <th colspan="7"></th>
     </tr>
   </thead>
 
@@ -18,8 +18,9 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= product.color %></td>
+        <td><%= link_to 'Show ', product %></td>
+        <td><%= link_to 'Edit ', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -27,5 +28,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>

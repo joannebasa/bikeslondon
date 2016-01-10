@@ -1,17 +1,39 @@
 body {
   
   background-image : url("background111.jpg");
-  color : #FFFFFF;
+  color : #000000;
   text-align : center;
   padding-top : 4em;
   font-family : 'Trebuchet MS', Helvetica, sans-serif;
+  width : 100%;
 
+}
+
+table {
+
+  padding : 4px;
+  width : 100%;
+
+
+}
+
+th {
+  
+  text-align : center;
+  padding : 1em;
+
+}
+
+tr:hover {
+  background-color: #666666;
 }
 
 p, ol, ul, td {
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 18px;
+  text-align : center;
+  padding : 1em;
 
 }
 
@@ -30,7 +52,7 @@ a {
 
   &:hover {
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: #666666;
   }
 }
 
@@ -40,8 +62,11 @@ div {
   }
 }
 
-#notice {
-  color: #000000;
+#table-head {
+  
+  padding : 1em;
+  text-align : center;
+
 }
 
 .field_with_errors {
@@ -59,11 +84,10 @@ div {
   background-color: #f0f0f0;
 
   h2 {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
@@ -73,10 +97,4 @@ div {
     font-size: 12px;
     list-style: square;
   }
-}
-
-#table-main {
-  
-    text-align : center;
-
 }
