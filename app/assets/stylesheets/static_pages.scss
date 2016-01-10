@@ -1,33 +1,44 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
-	
-	background-image : url("background111.jpg");
-	color : #FFFFFF;
-	text-align : center;
-      font-family : 'Trebuchet MS', Helvetica, sans-serif;
+      
+      background-image : url("background111.jpg");
+      color : #FFFFFF;
+      text-align : center;
+
+
 }
 
+.nav>li>a {
+
+     letter-spacing : 0.05em;
+     list-style-type : none;
+     color : #FFFFFF;
+     line-height : 0em;
+
+}
+
+#top-bar {
+  
+     height : 0em;
+
+
+}
 
 #store-front {
 
-	padding-top : 4em;
+      padding-top : 4em;
 }
-
 
 #about {
 
-	padding : 4em;
-	text-align : center;
+      padding : 4em;
+      text-align : center;
    
 }
 
 #about-photo1  {
 
-	display : inline;
-	text-align : center;
+      display : inline;
+      text-align : center;
       clear : both;
    
 }
