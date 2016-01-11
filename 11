@@ -1,0 +1,28 @@
+      invoke  active_record
+      remove    db/migrate/20160110195042_create_products.rb
+      create    db/migrate/20160111024345_create_products.rb
+   identical    app/models/product.rb
+      invoke  resource_route
+       route    resources :products
+      invoke  scaffold_controller
+       force    app/controllers/products_controller.rb
+      invoke    erb
+       exist      app/views/products
+       force      app/views/products/index.html.erb
+   identical      app/views/products/edit.html.erb
+       force      app/views/products/show.html.erb
+       force      app/views/products/new.html.erb
+       force      app/views/products/_form.html.erb
+      invoke    helper
+   identical      app/helpers/products_helper.rb
+      invoke    jbuilder
+       force      app/views/products/index.json.jbuilder
+       force      app/views/products/show.json.jbuilder
+      invoke  assets
+      invoke    coffee
+   identical      app/assets/javascripts/products.coffee
+      invoke    scss
+       force      app/assets/stylesheets/products.scss
+      invoke  scss
+       force    app/assets/stylesheets/scaffolds.scss
+Running via Spring preloader in process 1049

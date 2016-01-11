@@ -5,9 +5,9 @@
       <% @products.each do |product| %>
         <div class="col-md-6 col-lg-6">
           <h3><%= product.name %></h3>
+          <p>£<%= product.price %></p>
          <%= image_tag(product.image_url, class: "img-responsive", id: "folders") %>
           <p><%= product.description %></p>
-          <p><%= product.price %></p>
         </div><!-- /col -->
       <% end %>
     </div>
@@ -16,4 +16,3 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-  
