@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :products
+  resources :products
   get 'static_pages/landing_page'
 
   resources :products
