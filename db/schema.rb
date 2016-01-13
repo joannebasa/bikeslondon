@@ -22,7 +22,13 @@ ActiveRecord::Schema.define(version: 20160112235343) do
   add_index "orders", ["product_id"], name: "index_orders_on_product_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
-# Could not dump table "products" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_url"
+    t.decimal  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end
