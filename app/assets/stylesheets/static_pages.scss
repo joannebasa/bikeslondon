@@ -9,11 +9,12 @@ body {
 
 .img-responsive {
   
-  vertical-align : text-top;
-  display : inline-block;
-  padding-bottom : 0em;
+     vertical-align : text-top;
+     display : inline-block;
+     padding-bottom : 0em;
 
 }
+
 .nav>li>a {
 
      letter-spacing : 0.05em;
@@ -30,14 +31,16 @@ body {
 
 }
 
+#landing-page {
+  
+      text-align : center;
 
-#carousel {
+}
 
-      display : inline-block;
-      clear : both;
-      float : none;
-      width : 60%;
-      height : auto;
+.carousel-caption {
+  
+      color : #000000;
+      padding-top : 4em;
 
 }
 
