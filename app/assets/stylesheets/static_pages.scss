@@ -19,7 +19,7 @@ body {
      letter-spacing : 0.05em;
      list-style-type : none;
      color : #FFFFFF;
-     line-height : 0em;
+     line-height : 1.5em;
 
 }
 
@@ -36,11 +36,25 @@ body {
 
 }
 
-.carousel-caption {
+#carousel-example-generic {
   
-      color : #000000;
-      padding-top : 4em;
+      color : #FFFFFF;
+      margin: 0 auto;
 
+}
+
+.carousel-controls {
+
+     position:relative; 
+     width : 60%;
+     margin: 0 auto;
+
+}
+
+.carousel-indicators {
+
+   padding-bottom : 0px; 
+   
 }
 
 #store-front {
