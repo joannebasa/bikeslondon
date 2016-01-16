@@ -2,30 +2,30 @@
   <h1>Bikes London</h1>
   <p>Find me in app/views/static_pages/landing_page.html.erb</p>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-      <br>
-    <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox" align="center">
-        <% @products.each do |product| %>
-        <div class="item<%= " active" if product == @products.first %>">
-          <%= image_tag(product.image_url, class: "img-responsive") %>
-          <p><%= product.name %></p>
-          </div>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% @products.each do |product| %>
+      <li></li>
         <% end %>
+    </ol>
+    <br>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" align="center">
+      <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.first %>">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+        <p><%= product.name %></p>
       </div>
-    <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <% end %>
     </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+  </div>
 </section>

@@ -2,12 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  color: #FFFFFF;
+body a {
+
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-align : center;
+  color : #999999;
+
+  &:visited {
+    color: #6666CC;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+  
+  }
 }
 
 #edit {
@@ -37,23 +47,19 @@ body {
 
 }
 
-p, ol, ul, td {
+#products p ol ul a {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color : #FFFFFF;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #FFFFFF;
+#product-options a {
+  
+  color : #999999;
 
   &:visited {
-    color: #FFFFFF;
+    color: #6666CC;
   }
 
   &:hover {
@@ -61,6 +67,7 @@ a {
   
   }
 }
+
 
 div {
   &.field, &.actions {
