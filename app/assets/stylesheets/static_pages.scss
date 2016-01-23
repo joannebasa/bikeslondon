@@ -6,14 +6,6 @@ body {
 
 }
 
-body {
-  padding-top: 60px;
-}
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-}
 
 .img-responsive {
   
@@ -23,26 +15,23 @@ body {
 
 }
 
+.search {
+  
+     margin-top : 1em;
+
+}
+.search input {
+  
+    color : #000000;
+
+}
+
 .navbar {
       
      letter-spacing : 0.05em;
      list-style-type : none;
      color : #FFFFFF;
-     width : 100%;
-     height : 0em auto;
-
-}
-
-.navform {
-  
-    padding-top: 1em;
-
-}
-
-.navform input {
-  
-    color : #000000;
-
+     max-height : 0em auto;
 }
 
 
