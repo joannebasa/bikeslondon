@@ -14,21 +14,28 @@ body {
 
 }
 
-.nav>li>a {
-
+.navbar {
+      
      letter-spacing : 0.05em;
      list-style-type : none;
      color : #FFFFFF;
-     line-height : 1.5em;
+     width : 100%;
+     height : 0em;
 
 }
 
-#top-bar {
+.navform {
   
-     height : 0em auto;
-
+    padding-top: 1em;
 
 }
+
+.navform input {
+  
+    color : #000000;
+
+}
+
 
 #landing-page {
   
