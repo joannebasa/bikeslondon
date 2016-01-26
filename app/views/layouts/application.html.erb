@@ -26,16 +26,20 @@
           </div><!-- end projectName -->
         </div><!-- end navbar-header -->
         <div class="collapse navbar-collapse">
+        <%= form_tag("/products", method: "get") do %>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <%= label_tag(:q, "Search Bikes London...") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Go!") %>
+            </div>
+            <% end %>
+          </form>
           <ul class="nav navbar-nav navbar-right">
-            <li class="search"><%= form_tag('/products', method: 'get')  do %></li>
-            <li class="search"><%= label_tag(:q, "Search Bikes London...") %></li>
-            <li class="search"><%= text_field_tag(:q) %></li>
-            <li class="search"><%= submit_tag "Go!  " %></li>
             <li><%= link_to 'Home', static_pages_index_path %></li>
             <li><%= link_to 'About', static_pages_about_path %></li>
             <li><%= link_to 'Contact', static_pages_contact_path %></li>
-            <li><%= link_to 'Store', products_path %></li> 
-            <% end %>   
+            <li><%= link_to 'Store', products_path %></li>  
           </ul><!-- end nav navbar-nav -->
         </div><!-- end navbar-collapse collapse -->
       </div><!-- end container-fluid -->
