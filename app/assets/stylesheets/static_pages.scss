@@ -21,15 +21,33 @@ body {
 
 }
 
-.navbar ul li {
+.navbar li {
       
      letter-spacing : 0.05em;
      list-style-type : none;
      color : #FFFFFF;
-     min-height : 40px;
-     max-height : 40px;
-     height : 40px;
+     display : inline !important;
+     min-height : 40px !important;
+     max-height : 40px !important;
+     height : 40px !important;
+     margin-top : 10px !important;
+     margin-bottom : 10px !important;
+     padding-bottom : 10px;
+
+}
+
+form {
    
+     list-style-type : none;
+     color : #FFFFFF;
+     display : inline !important;
+     min-height : 40px !important;
+     max-height : 40px !important;
+     height : 40px !important;
+     padding-top : -10px !important;
+     margin-bottom : -10px !important;
+     margin-top : -10px !important;
+
 }
 
 
