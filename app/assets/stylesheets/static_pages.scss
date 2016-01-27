@@ -30,21 +30,21 @@ body {
      min-height : 40px !important;
      max-height : 40px !important;
      height : 40px !important;
-     margin-top : 10px !important;
-     margin-bottom : 10px !important;
-     padding-bottom : 10px;
+     margin-top : -15px !important;
+     margin-bottom : -20px !important;
+     padding-bottom : 5px;
 
 }
 
-form {
+.form {
    
      list-style-type : none;
      color : #FFFFFF;
      display : inline !important;
-     min-height : 40px !important;
-     max-height : 40px !important;
-     height : 40px !important;
-     padding-top : -10px !important;
+     min-height : 30px !important;
+     max-height : 30px !important;
+     height : 30px !important;
+     padding-top : 10px !important;
      margin-bottom : -10px !important;
      margin-top : -10px !important;
 
@@ -166,11 +166,11 @@ input {
    
 }
 
-#fields {
+#thank-you {
 
       display: block;
       text-align : center;
-      color : #FFFFFF;
+      color : #000000;
       padding : 2em 4em;
 
 }
@@ -183,7 +183,7 @@ input {
 
 }
 
-#message-box {
+#message textarea {
 
       text-align : center;
       color : #000000;

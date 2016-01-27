@@ -20,39 +20,36 @@
           </ul> <!--end id contacts -->
         </div> <!-- end center contact -->
       </div> <!-- end #contact -->
-        <form data-toggle="validator" role="form">
+        <div class="form">
           <div class="row">
-            <div id="must" class="col-lg-4 col-md-4">
+            <div id="must" class="col-lg-8 col-md-8">
               <h1><strong><u>Let's Talk!</u></strong></h1>
               <p>*(required fields)</p>
             </div>
           </div>
-          <div class="row" id="fields">
-            <div class="form-group" class="col-lg-8 col-md-8">
-              <label for="inputName" class="control-label">Your Name</label><br>
-              <input type="text" class="form-control" id="name" placeholder="John Doe"/>
-            </div> <!-- end form group text -->
-            <div class="form-group" class="col-lg-8 col-md-8">
-              <label for="inputEmail" class="control-label">Your email address*</label><br>
-              <input type="email" id="email" class="form-control" placeholder="you@example.com" required/>
-              <p id="visible-email"></p>
-            </div> <!-- end form-group email -->
-            <div class="form-group" class="col-lg-8 col-md-8">
-              <label for="tel">Your Contact Number</label>
-              <input type="tel" id="tel" class="form-control" placeholder="Complete Phone Number" >
-            </div>
-          </div>
-          <br>
+
+          <%= flash[:notice] %>
+
+          <%= form_tag("/static_pages/thank_you") do %>
           <div class="row">
-            <div class="form-group" class="col-lg-8 col-md-8">
-              <label for="inputMessage">Your Message*</label><br>
-              <textarea style="resize:none" class="form-control" cols="80" rows="5" placeholder="Leave me a Message!" id="message-box" required></textarea><br>
-               <p id="visible-comment"></p>
-               <p id="char-count"></p>
-              <button type="submit" class="btn btn-default" id="button">Submit</button>
+            <div class="col-md-12 col-lg-12">
+              <div class="form-group">
+                <%= label_tag :name, "Your Name*" %>
+                <%= text_field_tag :name, nil, class: "form-control", placeholder: "John Doe", required: true %>
+              </div> 
+              <div class="form-group">
+                <%= label_tag :email, "Your Email Address*" %>
+                <%= email_field_tag :email, nil, class: "form-control", placeholder: "john.doe@hello.com", required: true %>
+              </div>
+              <div class="form-group" id="message">
+                <%= label_tag :message, "Your Message*" %>
+                <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: true %>
+              </div>      
             </div>
-          </div> <!-- end row -->
-        </form> <!-- end form -->
+          </div><!-- end row -->
+          <%= submit_tag "Send", class: "btn btn-info" %>   
+          <% end %>
+        </div> <!-- end form -->
       </div> <!--end center-contact -->
       <div id="availability-contact" class="col-xs-12 col-md-12 col-lg-12">
         <h3>Available 24/7, 365 days a year (send message or <a href="mailto:abcdef@ghijklm.com?Subject=Enquiry"><font color="white"><u>email</u></font></a> to confirm)</h3>

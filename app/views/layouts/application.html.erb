@@ -28,9 +28,9 @@
         <div class="collapse navbar-collapse" align="right">
         <%= form_tag("/products", method: "get") do %> 
           <ul class="nav navbar-nav navbar-right">
-            <li><%= label_tag(:q, "Search Bikes London...") %></li>
-            <li><%= text_field_tag(:q) %></li>
-            <li><%= submit_tag("Go! ") %></li><th>
+            <li class="form"><%= label_tag(:q, "Search Bikes London...") %></li>
+            <li class="form"><%= text_field_tag(:q) %></li>
+            <li class="form"><%= submit_tag("Go! ") %></li><th>
             <li><%= link_to 'Home', static_pages_index_path %></li>
             <li><%= link_to 'About', static_pages_about_path %></li>
             <li><%= link_to 'Contact', static_pages_contact_path %></li>
