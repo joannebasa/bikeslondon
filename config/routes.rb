@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  resources :users
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
 
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
 
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

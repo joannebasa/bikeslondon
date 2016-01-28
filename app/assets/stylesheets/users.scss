@@ -1,0 +1,53 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#error_explanation ul li {
+  
+  color : #000000;
+  text-align : center;
+
+}
+
+#sign-page {
+
+  text-align : center;
+
+}
+
+.actions {
+	
+  width : 20%;
+  text-align : center;
+  margin : 0px auto;
+
+}
+
+#new_user input {
+  
+     color : #000000;
+     text-align : center;
+     display : inline;
+     width : 50%;
+
+}
+
+
+#remember_me input {
+  
+     display : inline;
+     margin : 0px auto;
+    
+}
+
+#remember-me  {
+	
+     text-align : center;
+
+}
+
+#edit-registration {
+	
+     text-align : center;
+
+}
