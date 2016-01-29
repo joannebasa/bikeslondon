@@ -6,7 +6,7 @@
   def index
     if params[:q]
       search_term = params[:q]
-      @product = Product.where("name ILIKE ?", "%#{search_term}%")
+      @product = Product.where( "name LIKE ?", "%#{search_term}%" )
     else
       @product = Product.all
     end
