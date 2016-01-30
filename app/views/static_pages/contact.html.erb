@@ -27,8 +27,10 @@
               <p>*(required fields)</p>
             </div>
           </div>
-
-          <%= flash[:notice] %>
+          
+          <% if notice %>
+            <p id="notice" class="alert alert-info"><%= flash[:notice] %></p>
+          <% end %>
 
           <%= form_tag("/static_pages/thank_you") do %>
           <div class="row">

@@ -1,10 +1,12 @@
 <section id="edit">
-<p><%= notice %></p>
-<h3><%= @product.name %></h3>
-<p>£<%= @product.price %></p>
-<%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
-<p><%= @product.description %></p>
+  <% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+  <% end %>
+  <h3><%= @product.name %></h3>
+  <p>£<%= @product.price %></p>
+  <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
+  <p><%= @product.description %></p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', @product %>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', @product %>
 </section>
