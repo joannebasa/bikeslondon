@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   after_create :create_profile
 
-  def create_profile
-    self.profile.create
+  def create_user
+    self.user.create
   end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
