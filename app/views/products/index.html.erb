@@ -1,9 +1,10 @@
 <section id="products">
   <h1>Bikes for Sale</h1>
   <%= link_to 'New Product', new_product_path %>
+  <% @product.each do |product| %>
+  <div><p> </p></div>
   <div class="container-fluid">
     <div class="row">
-      <% @product.each do |product| %>
       <%= render partial: "shared/product", locals: {product: product} %>
       <% end %> 
     </div><!-- end row -->

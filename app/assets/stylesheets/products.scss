@@ -36,15 +36,23 @@ body a {
 
 #products {
   
-  padding : 4em 0em;
+  padding-top : 4em;
 
 }
+
 
 #folders {
   
   display : inline-block;
   text-align : center;
-  clear : both;
+
+}
+
+.thumbnail {
+  
+  min-width : 100% auto;
+  max-width : 100% auto;
+  height : auto;
 
 }
 
@@ -52,8 +60,10 @@ body a {
   
   padding-top : 4em;
   text-align : center;
+  color : white;
 
 }
+
 
 #products p ol ul a {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -95,10 +105,6 @@ div {
   
    color : #666666;
 
-}
-
-#new-products {
-  color : white;
 }
 
 .field_with_errors {
