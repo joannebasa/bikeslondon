@@ -9,7 +9,14 @@
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
     </div>
-
+    <div class="field" class="col-md-12 col-lg-12">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field" class="col-md-12 col-lg-12">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name %>
+    </div>
     <div class="field" class="col-md-12 col-lg-12">
       <%= f.label :password %>
       <% if @minimum_password_length %>
@@ -26,8 +33,8 @@
     <div class="actions" class="col-md-12 col-lg-12">
       <%= f.submit "Sign up", class: "btn btn-info" %>
     </div>
-  <% end %>
-    </div><!-- end row -->
+    <% end %>
+  </div><!-- end row -->
 
   <%= render "devise/shared/links" %>
 </section>
