@@ -28,10 +28,16 @@ body a {
 
 }
 
-textarea#comment_body {
+textarea#comment-box {
   
   color : #000000;
 
+}
+
+
+textarea#input button {
+  
+  width : 20%;
 }
 
 #pass-comment {
