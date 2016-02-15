@@ -7,7 +7,6 @@
       <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br>
       <% end %>
       <%= image_tag(product.image_url, class: "img-responsive", id: "folders") %>
-
       <p>£<%= product.price %></p>
       <p><%= product.description %></p>
       <p class="btn btn-info"><%= link_to 'Product Details', product %></a></p> <a href="#" class="btn btn-info" role="button">Add to Cart</a>
