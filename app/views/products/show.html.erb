@@ -6,9 +6,10 @@
   <p>£<%= @product.price %></p>
   <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
   <p><%= @product.description %></p>
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', @product %>
+  <% if current_user.admin? %>
+    <%= link_to 'Edit | ', edit_product_path(@product) %> 
+  <% end %>
+  <%= link_to 'Back', products_path %>
   <br>
   <h1>___________</h1>
   <br>
