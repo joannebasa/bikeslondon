@@ -6,10 +6,17 @@
   <p>£<%= @product.price %></p>
   <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
   <p><%= @product.description %></p>
+<<<<<<< HEAD
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit | ', edit_product_path(@product) %>
   <% end %>
   <%= link_to 'Back', @product %>
+=======
+  <% if current_user.admin? %>
+    <%= link_to 'Edit | ', edit_product_path(@product) %> 
+  <% end %>
+  <%= link_to 'Back', products_path %>
+>>>>>>> 2eac75f8325399662e08fc10bb21f6aeb89ed158
   <br>
   <h1>___________</h1>
   <br>

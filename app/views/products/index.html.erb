@@ -1,9 +1,16 @@
 <section id="products">
   <h1>Bikes for Sale</h1>
+<<<<<<< HEAD
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'New Product', new_product_path %>
    <% end %>
+=======
+  <% if current_user.admin? %>
+  <%= link_to 'New Product', new_product_path %>
+  <% end %>
+>>>>>>> 2eac75f8325399662e08fc10bb21f6aeb89ed158
   <% @product.each do |product| %>
+
   <div><p> </p></div>
   <div class="container-fluid">
     <div class="row">
