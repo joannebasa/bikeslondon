@@ -1,6 +1,8 @@
 <section id="products">
   <h1>Bikes for Sale</h1>
-  <%= link_to 'New Product', new_product_path %>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path %>
+   <% end %>
   <% @product.each do |product| %>
   <div><p> </p></div>
   <div class="container-fluid">

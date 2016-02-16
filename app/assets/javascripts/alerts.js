@@ -1,1 +1,5 @@
-$(.alert).delay(300).delay(100).fadeOut(300);
+$(function() {
+   $('.alert').delay(100).fadeIn('normal', function() {
+      $(this).delay(100).fadeOut();
+   });
+});
