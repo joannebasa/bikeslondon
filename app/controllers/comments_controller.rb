@@ -16,11 +16,7 @@
   end
 
   def destroy
-<<<<<<< HEAD
-    @comment  = Comment.find(params[:id])
-=======
     @comment = Comment.find(params[:id])
->>>>>>> master
     product = @comment.product
     @comment.destroy
     redirect_to product
