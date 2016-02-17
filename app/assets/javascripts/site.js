@@ -1,8 +1,4 @@
 $(document).on('ready page:load', function(){
-	$('.rating').raty( { path: '/assets/images-raty', scoreName: 'comment[rating]' });
-});
-
-$(document).on('ready page:load', function(){
     $('.rating').raty( { path: '/assets/images-raty', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets/images-raty',
       readOnly: true,
