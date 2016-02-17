@@ -4,15 +4,26 @@
   <% end %>
   <h3><%= @product.name %></h3>
   <p>£<%= @product.price %></p>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', @product %><br>
   <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
   <p><%= @product.description %></p>
+<<<<<<< HEAD
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', @product %>
+  <% if current_user.admin? %>
+    <%= link_to 'Edit | ', edit_product_path(@product) %> 
+  <% end %>
+  <%= link_to 'Back', products_path %>
+
   <br>
+=======
+  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  
+>>>>>>> master
   <h1>___________</h1>
   <br>
   <%= render partial: "comments/new_comment", locals: {user: @product} %>
   <br>
+  <h1>___________</h1>
   <%= render partial: "comments/comments", locals: {user: @product} %>
 </section>
