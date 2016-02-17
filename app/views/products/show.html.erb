@@ -4,12 +4,12 @@
   <% end %>
   <h3><%= @product.name %></h3>
   <p>£<%= @product.price %></p>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', @product %><br>
   <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
   <p><%= @product.description %></p>
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', @product %>
-
+  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  
   <h1>___________</h1>
   <br>
   <%= render partial: "comments/new_comment", locals: {user: @product} %>
