@@ -5,12 +5,12 @@
     <%= link_to 'New Product', new_product_path %>
    <% end %>
 
-  <% @product.each do |product| %>
+  <% @products.each do |products| %>
 
   <div><p> </p></div>
   <div class="container-fluid">
     <div class="row">
-      <%= render partial: "shared/product", locals: {product: product} %>
+      <%= render partial: "shared/product", locals: {product: products} %>
       <% end %> 
     </div><!-- end row -->
   </div><!-- end container-fluid -->
