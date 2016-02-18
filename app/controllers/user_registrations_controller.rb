@@ -1,5 +1,5 @@
 class UserRegistrationsController < Devise::RegistrationsController
-  def deliver_now
+  def create
     super
     if @user.persisted?
       UserMailer.welcome(@user).deliver_now
