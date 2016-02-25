@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   
   resources :products do
     resources :comments
+    resources :users
   end
-  resources :users
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
