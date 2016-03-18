@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'comment/index'
 
   devise_for :user, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }

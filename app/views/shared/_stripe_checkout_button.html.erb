@@ -3,6 +3,8 @@
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="/square-image.png"
   data-name="Bikes London"
-  data-description="<%= @product.name %> (<%= @product.price %>)"
-  data-amount= "<%= @product.price %>">
+  data-description="<%= @product.name %> (£<%= @product.price %>)"
+  data-amount= "<%= @product.price %>"
+  data-currency="gbp"
+  data-locale="auto">
 </script>
