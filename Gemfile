@@ -45,7 +45,6 @@ group :development, :test do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'stripe'
-  gem 'stripe_event'
 end
 
 group :development do
