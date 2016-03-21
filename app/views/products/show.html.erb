@@ -5,8 +5,10 @@
   <h3><%= @product.name %></h3>
   <p>£<%= @product.price %></p>
   <%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
+    <%= hidden_field_tag :product_id, @product.id %>
+    <%= render partial: "shared/stripe_checkout_button" %>
   <% end %>
+  <br>
    <% if signed_in? && current_user.admin? %>
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <% end %><br>

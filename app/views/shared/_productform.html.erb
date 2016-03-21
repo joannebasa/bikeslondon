@@ -23,7 +23,7 @@
   </div>
    <div class="field">
     <%= f.label :price %><br>
-    <%= f. text_field :price  %>
+    <%= f.text_field :price, :class => 'price', :value => (number_with_precision(f.object.cost, :precision => 2) || 0) %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-info' %>
