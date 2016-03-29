@@ -14,8 +14,10 @@
   <% end %><br>
   <%= link_to 'Back', Product %>
   <br>
-  <div><p></p></div>
-  <%= image_tag(@product.image_url, class: "img-responsive", id: "folders") %>
+  <div>
+    <p></p>
+    <%= image_tag(@product.image_url, width: 350, class: "img-zoom", data_zoom_image: "#{@product.image_url}") %>
+  </div>
   <p><%= @product.description %></p>
   <br>
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>

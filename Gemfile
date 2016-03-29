@@ -44,6 +44,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'spork-rails'
   gem 'guard-spork'
+  gem 'elevatezoom-rails'
 end
 
 group :development do
@@ -62,4 +63,3 @@ end
 gem 'devise'
 gem 'cancancan'
 gem 'will_paginate', '~>3.0.6'
-
