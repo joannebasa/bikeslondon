@@ -1,6 +1,5 @@
 <section id="products">
   <h1>Bikes for Sale</h1>
-
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'New Product', new_product_path %>
    <% end %>

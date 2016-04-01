@@ -16,6 +16,8 @@
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC")
+    $redis.incr "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:products:#{@product.id}:views"
+    $redis.sadd "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:products:#{@product.id}:uniques", request.remote_ip
   end
 
   # GET /products/new
