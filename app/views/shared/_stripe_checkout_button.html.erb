@@ -1,6 +1,6 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-  data-key="pk_test_LxLcbPL889pWdtN4fBinlwGh"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="/square-image.png"
   data-name="Bikes London"
   data-description="<%= @product.name %> (<%= @product.price %>)"
