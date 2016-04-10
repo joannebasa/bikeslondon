@@ -1,6 +1,7 @@
 class PaymentsController < ApplicationController
-Stripe.api_key = Rails.configuration.stripe[:secret_key]
+
   def create
+    Stripe.api_key = Rails.configuration.stripe[:secret_key]
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
     @user = current_user
