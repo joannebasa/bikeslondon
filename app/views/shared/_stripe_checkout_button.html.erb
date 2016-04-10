@@ -9,5 +9,10 @@
     data-amount="<%= @product.price*100 %>"
     data-locale="auto">
   </script>
+  <script type="text/javascript">
+  // This identifies your website in the createToken call below
+  Stripe.setPublishableKey('pk_test_LxLcbPL889pWdtN4fBinlwGh');
+  // ...
+</script>
 </form>
 
