@@ -8,6 +8,7 @@
     data-currency="gbp"
     data-amount="<%= @product.price*100 %>"
     data-locale="auto">
+    Stripe.api_key = Rails.configuration.stripe[:secret_key]
   </script>
 </form>
 
