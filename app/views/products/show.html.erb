@@ -7,7 +7,6 @@
   <p><%= number_to_currency(@product.price,:unit=>'£') %></p>
   <% end %>
   <%= form_tag "/payments/create" do %>
-    <%= hidden_field_tag Rails.configuration.stripe[:publishable_key] %>
     <%= hidden_field_tag :product_id, @product.id %>
     <%= hidden_field_tag :product_price, (@product.price*100).to_i %>
     <%= render partial: "shared/stripe_checkout_button" %>
