@@ -15,7 +15,6 @@ class PaymentsController < ApplicationController
 
     if charge.paid
       Order.create(:product_id => @product_id,:user_id => current_user, :total => @product.price)
-      OrderMailer.order_email(@email, @name, @message).deliver_now
     end
     flash[:success] = "Payment processed successfully"
   rescue Stripe::CardError => e

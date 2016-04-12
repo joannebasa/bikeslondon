@@ -15,12 +15,13 @@
   end
 
   def new
-    OrderMailer.order_email(@email, @name, @message).deliver_now
+    
   end
 
   def create
     @order = Order.create(order_params)
     respond_with @order
+    OrderMailer.order_email(@email, @name, @message).deliver_now
   end
 
   def destroy
