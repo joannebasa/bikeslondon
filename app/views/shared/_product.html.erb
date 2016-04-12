@@ -1,7 +1,6 @@
 <div class="col-sm-12 col-md-6 col-lg-3">
   <div class="thumbnail img-responsive">
     <div class="caption">
-   <% cache(cache_key_for_products) do %>
       <h3><%= product.name %></h3>
       <% if signed_in? && current_user.admin? %>
         <%= link_to 'Edit | ', edit_product_path(product) %>
@@ -11,7 +10,6 @@
       <p><%= number_to_currency(product.price,:unit=>'£') %></p>
       <p><%= product.description %></p>
       <p class="btn btn-info"><%= link_to 'Product Details', product %></p> <a href="#" class="btn btn-info" role="button">Add to Cart</a>
-      <% end %>
     </div>
   </div><!-- end thumbnail -->
 </div><!-- end col -->
