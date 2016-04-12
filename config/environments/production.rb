@@ -1,7 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  heroku config:set STRIPE_PERISHABLE_KEY = pk_test_LxLcbPL889pWdtN4fBinlwGh
-  heroku config:set STRIPE_SECRET_KEY = sk_test_kiadDnf6IjMuSi3GwG0vuN4b
 
   # Code is not reloaded between requests.
   config.cache_classes = true
