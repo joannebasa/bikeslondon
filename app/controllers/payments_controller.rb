@@ -1,6 +1,4 @@
 class PaymentsController < ApplicationController
-
-
   def create
     Stripe.api_key = Rails.configuration.stripe[:secret_key]
     token = params[:stripeToken]
