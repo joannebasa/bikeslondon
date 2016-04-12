@@ -15,7 +15,7 @@
   end
 
   def new
-    UserMailer.contact_form(@email, @name, @message).deliver_now
+    OrderMailer.order_email(@email, @name, @message).deliver_now
   end
 
   def create
