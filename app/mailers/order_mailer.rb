@@ -1,9 +1,18 @@
 class OrderMailer < ApplicationMailer
   default from: 'pjbasa@gmail.com'
- 
+
+  def contact_form(email, name, message)
+  @message = message
+    mail(:from => email,
+        :to => 'pjbasa@gmail.com',
+        :subject => "A new contact form message from #{name}")
+  end
+
   def order_email(user)
+  	@name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
     @user = current_user
-    @url  = 'https://bikes-london.herokuapp.com/login'
-    mail(to: @user.email, subject: 'Thank you for your purchase!')
+    OrderMailer.order_email(@email, @name, @message).deliver_now
   end
 end

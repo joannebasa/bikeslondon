@@ -15,8 +15,7 @@
   end
 
   def new
-    @order = Order.find(params[:id])
-    OrderMailer.order_email(@user).deliver_now
+    UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
   def create
