@@ -21,11 +21,9 @@ class UserMailer < ApplicationMailer
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
-  def order_email (order, user)
-    @user = user
-    @order = order
-    @message = params[:message]
-    mail( :to => email,
+  def order_email (user)
+    @user = current_user
+    mail( :to => user.email,
         :subject => "Bikes London Order Confirmation")
   end
 end
