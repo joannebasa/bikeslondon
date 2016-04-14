@@ -20,8 +20,8 @@
 
   def create
     @order = Order.new(params[:order])
-    redirect_to @user, notice: "Order Completed Successfully."
-    UserMailer.order_email(@user).deliver_now
+    respond_with @order
+    UserMailer.order_email(@user, @order).deliver_now 
   end
 
   def destroy
