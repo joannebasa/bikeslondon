@@ -22,9 +22,9 @@ class UserMailer < ApplicationMailer
   end
 
   def order_email
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
+    def order_confirmation(user, order)
+    @user = user
+    @order = order
     mail( :to => user.email,
         :subject => "Bikes London Order Notification")
   end
