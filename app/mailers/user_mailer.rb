@@ -22,7 +22,9 @@ class UserMailer < ApplicationMailer
   end
 
   def order_email
-    
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
   end
 
 end
