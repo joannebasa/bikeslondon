@@ -22,7 +22,7 @@
     @order = Order.create(order_params)
     respond_with @order
     if @order.save
-      UserMailer.order_confirmation(order, user).deliver
+      UserMailer.order_confirmation(order, user).deliver_now
       redirect_to @user, notice: "Order Completed Successfully."
     end
   end
