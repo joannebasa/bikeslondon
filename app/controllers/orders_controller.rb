@@ -20,12 +20,8 @@
 
   def create
     @order = Order.new(params[:order])
-    if @order.save
-      UserMailer.order_confirmation(@order, @user).deliver
-      redirect_to @user, notice: "Order Completed Successfully."
-    else
-      render :new
-    end
+    UserMailer.order_email(@order, @user).deliver_now
+    redirect_to @user, notice: "Order Completed Successfully."
   end
 
   def destroy
