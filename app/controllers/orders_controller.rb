@@ -19,6 +19,8 @@
   end
 
   def create
+    @name = params[:name]
+    @email = params[:email]
     @order = Order.new(params[:order])
     respond_with @order
     UserMailer.order_email(@user, @order).deliver_now 

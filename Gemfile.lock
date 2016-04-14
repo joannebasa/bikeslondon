@@ -200,7 +200,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.3)
+    rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -287,7 +287,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor
   redis-rails
-  rspec-rails (~> 3.0)
+  rspec-rails (~> 3.4.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spork-rails
