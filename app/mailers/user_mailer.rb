@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
   def order_email (order, user)
     @user = user
     @order = order
-    mail( :to => user.email,
-        :subject => "Bikes London Order Notification")
+    mail( :to => current_user.email,
+        :subject => "Bikes London Order Confirmation")
   end
 end
