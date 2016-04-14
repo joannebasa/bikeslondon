@@ -20,7 +20,7 @@
 
   def create
     @order = Order.new(params[:order])
-    UserMailer.order_confirmation(@order, @user).deliver.now
+    UserMailer.order_confirmation(@order, @user).deliver_now
     redirect_to @user, notice: "Order Completed Successfully."
   end
 
