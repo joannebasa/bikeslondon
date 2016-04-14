@@ -25,6 +25,8 @@ class UserMailer < ApplicationMailer
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
+    mail( :to => user.email,
+        :subject => "Bikes London Order Notification")
   end
 
 end
