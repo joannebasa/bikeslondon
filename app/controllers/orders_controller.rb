@@ -19,11 +19,15 @@
   end
 
   def create
+    @order = Order.new(params[:order])
+     respond_with @order
     @name = params[:name]
     @email = params[:email]
-    @order = Order.new(params[:order])
-    respond_with @order
-    UserMailer.order_email(@user, @order).deliver_now 
+    @message = params[:message]
+    UserMailer.order_mail( :to => email,
+        :subject => "Bikes London Order Confirmation",
+        :order => order_params).deliver_now
+
   end
 
   def destroy
