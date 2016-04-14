@@ -15,13 +15,18 @@
   end
 
   def new
-    if Order.create?
-      OrderMailer.order_email(@email, @name, @message).deliver_now
+  
   end
 
   def create
     @order = Order.create(order_params)
     respond_with @order
+    if @order.save
+      UserMailer.order_email(@order, @user).deliver_now
+      redirect_to @user, notice: "Order Completed Successfully."
+    else
+      render :new
+    end
   end
 
   def destroy

@@ -21,4 +21,8 @@ class UserMailer < ApplicationMailer
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
+  def order_email
+    
+  end
+
 end
