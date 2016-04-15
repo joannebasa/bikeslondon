@@ -21,11 +21,11 @@
   def create
     @order = Order.new(params[:order])
     if @order.save
-      OrderMailer.order_confirmation(order, user).deliver_now
       redirect_to @user, notice: "Order Completed Successfully."
     else
       render :new
     end
+    OrderMailer.order_confirmation(order, user).deliver_now
   end
 
   def destroy
