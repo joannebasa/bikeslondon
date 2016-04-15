@@ -21,7 +21,7 @@
   def create
     @order = Order.new(params[:order])
     if @order.save
-      UserMailer.order_confirmation(@order, @user).deliver_now
+      UserMailer.order_confirmation(order, user).deliver_now
       redirect_to @user, notice: "Order Completed Successfully."
     else
       render :new
