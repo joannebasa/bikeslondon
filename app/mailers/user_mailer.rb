@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
 
   def order_confirmation(user, email)
     @user = current_user
-    mail( :to => @user.email,
+    mail( :to => current_user.email,
         :subject => "#{@appname} Order Received")
   end
 end
